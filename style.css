@@ -1,0 +1,151 @@
+/* Importa uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(-45deg,#3b82f6,#22c55e,#9333ea,#f59e0b);
+    background-size:400% 400%;
+    animation:gradiente 12s ease infinite;
+    overflow:hidden;
+}
+
+/* Animação do fundo */
+@keyframes gradiente{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Cartão principal */
+.container{
+    width:90%;
+    max-width:700px;
+    padding:45px;
+    text-align:center;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    color:white;
+    animation:entrada 1s ease;
+}
+
+/* Entrada suave */
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.3);
+}
+
+p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:35px;
+    color:#f3f4f6;
+}
+
+/* Botão */
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+    background:linear-gradient(45deg,#ff6b6b,#ffb347);
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+}
+
+button:active{
+    transform:scale(.97);
+}
+
+/* Mensagem motivacional */
+#mensagem{
+    margin-top:30px;
+    font-size:1.4rem;
+    font-weight:bold;
+    color:#fff176;
+    animation:aparecer .6s;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* Círculos decorativos */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    filter:blur(10px);
+}
+
+body::before{
+    top:-80px;
+    left:-80px;
+}
+
+body::after{
+    bottom:-80px;
+    right:-80px;
+}
+
+/* Responsividade */
+@media(max-width:768px){
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    button{
+        width:100%;
+        font-size:17px;
+    }
+
+}
+
