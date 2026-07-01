@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Motivação</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4CAF50, #2E8B57);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 700px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: #FFD700;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #FFC107;
+            transform: scale(1.05);
+        }
+
+        #mensagem {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #FFE082;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>✨ Nunca Desista! ✨</h1>
+
+        <p>
+            O sucesso é construído com dedicação, persistência e coragem.
+            Cada desafio enfrentado é uma oportunidade para crescer.
+            Acredite em você e continue caminhando em direção aos seus sonhos.
+        </p>
+
+        <button onclick="mostrarMensagem()">
+            Receber Motivação
+        </button>
+
+        <div id="mensagem"></div>
+    </div>
+
+    <script>
+        const mensagens = [
+            "Você é mais forte do que imagina!",
+            "Grandes conquistas começam com pequenos passos.",
+            "Nunca pare de aprender e evoluir.",
+            "A persistência vence o talento quando o talento não persiste.",
+            "Hoje é um ótimo dia para começar algo incrível!",
+            "Acredite em si mesmo e tudo será possível.",
+            "Cada esforço de hoje aproxima você do sucesso."
+        ];
+
+        function mostrarMensagem() {
+            const indice = Math.floor(Math.random() * mensagens.length);
+            document.getElementById("mensagem").innerHTML = mensagens[indice];
+        }
+    </script>
+
+</body>
+</html>
